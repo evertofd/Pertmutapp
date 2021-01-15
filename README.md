@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Equipo Railistas'
+## Categoría ReCoders Award
 
-Things you may want to cover:
+## 1. Tecnología
 
-* Ruby version
+* Rails 6.0
+* Ruby 2.7
 
-* System dependencies
+## 2. Integrantes
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Debh / D3bh#2437
+* mcmailo / Stanic#0892
+* Evertofd / Everto#2607
