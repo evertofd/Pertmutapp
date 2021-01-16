@@ -23,7 +23,7 @@
     <div class="col-lg-10">
       <%= image_tag(product.picture, style: "margin-bottom: 10px; border-radius: 5px;") if product.picture? %>
   
-      <%= form.text_field :picture, id: :product_picture, class: "form-control" %>
+      <%= form.file_field :picture, id: :product_picture, class: "form-control" %>
     </div>
     <%= form.hidden_field :picture_cache %>
   </div>
