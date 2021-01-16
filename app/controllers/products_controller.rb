@@ -7,6 +7,13 @@ class ProductsController < ApplicationController
     @products = Product.where(enabled:true)
   end
 
+  def set_aside
+    @product = Product.find(params[:id])
+    @product.enabled = false
+    @product.save
+
+    redirect_to root_path, notice: "HAS RESERVADO EL PRODUCTO"
+  end
   # GET /products/1
   # GET /products/1.json
   def show
@@ -15,6 +22,9 @@ class ProductsController < ApplicationController
   # GET /products/new
   def new
     @product = Product.new
+  end
+  def offer
+    @product = Product.all
   end
 
   # GET /products/1/edit
