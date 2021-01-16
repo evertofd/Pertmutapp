@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :products
+  resources :products do 
+    resources :comments
+  end
   root to: 'products#index'
 
   get '/products_set_aside/:id', to: 'products#set_aside', as: 'products_set_aside'
