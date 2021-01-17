@@ -29,10 +29,6 @@
   </div>
 </div>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> a662092e2a8794cc747b32f8e0a261ede5496400
 <div class="form-group">
   <%= form.label :description, "Descripción", class: "col-lg-2 control-label" %>
   <div class="col-lg-10">
@@ -41,17 +37,15 @@
 </div>
 
 <div class="field">
-  <%= form.label :enabled %>
+  <%= form.label :enabled, "Disponible" %>
   <%= form.check_box :enabled, id: :product_enabled %>
 </div>
 
 <div class="form-group">
   <div class="col-lg-10 col-lg-offset-2">
-    <% if user_signed_in? %>
       <%= form.submit "Enviar", class: "btn btn-primary" %>
       <%= link_to 'Volver', products_path, class: "btn btn-warning"  %>      
-      <%= link_to 'Editar Productos', products_offer_path, class: "btn btn-succes"  %>
-      <%end%>
+      <%= link_to 'Editar Productos', products_publications_path, class: "btn btn-succes"  %>
     <% end %>
   </div>
 </div>

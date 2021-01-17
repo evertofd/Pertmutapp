@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-xs-8 col-sm-10 col-md-10">
+    <h1 class="text-center text-secondary">Reservados</h1>
+  </div>
+
+
+  <div class="row">
+    <% @products.each do |product| %>
+    <%  if product.enabled == false && product.reserved == current_user.id%>
+    <div class="col-sm-4">
+
+      <div class="thumbnail">
+        <%= image_tag product.picture.variant(resize: "200x200") %>
+        <div class="caption text-center">
+          <h3>  <%= product.name %></h3>
+          <h3><%= product.description %></h3>
+          <p><small><%= time_ago_in_words(product.created_at) %> ago</small></p>
+
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
