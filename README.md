@@ -19,3 +19,7 @@ Es una plataforma desarrollada para fomentar el uso de trueque en la ciudad.
 
 * Para crear un producto en la aplicación, al ingresar en el navbar a "Publicar", es necesario recargar la página para publicar (F5).
 * Es una maqueta de la aplicación, ya que hay funcionalidades que queremos agregar más adelante, tales como envío de mails entre los usuarios y dejar más limpia la reserva de productos.
+
+## Despliegue
+
+https://radiant-ocean-04010.herokuapp.com/
