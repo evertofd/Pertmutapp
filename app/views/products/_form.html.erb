@@ -29,25 +29,12 @@
   </div>
 </div>
 
-<div class="form-group form-group-custom">
-  <%= form.label :picture, "URL Imagen", class: "col-lg-2 control-label" %>
-  <div class="col-lg-10">
-    <%= image_tag(product.picture, style: "margin-bottom: 10px; border-radius: 5px;") if product.picture? %>
-
-    <%= form.text_field :picture, id: :product_picture, class: "form-control" %>
-  </div>
-  <%= form.hidden_field :picture_cache %>
-</div>
-
-
-
 <div class="form-group">
   <%= form.label :description, "Descripción", class: "col-lg-2 control-label" %>
   <div class="col-lg-10">
     <%= form.text_area :description, id: :product_content, class: "form-control", rows: 10 %>
   </div>
 </div>
-
 
 <div class="field">
   <%= form.label :enabled %>
@@ -58,8 +45,9 @@
   <div class="col-lg-10 col-lg-offset-2">
     <% if user_signed_in? %>
       <%= form.submit "Enviar", class: "btn btn-primary" %>
-      <%= link_to 'Volver', products_path, class: "btn btn-warning"  %>
+      <%= link_to 'Volver', products_path, class: "btn btn-warning"  %>      
       <%= link_to 'Editar Productos', products_offer_path, class: "btn btn-succes"  %>
+      <%end%>
     <% end %>
   </div>
 </div>
