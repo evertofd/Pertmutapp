@@ -6,6 +6,7 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.where(enabled:true)
+    @products = Product.search(params[:search])
   end
 
   def set_aside
@@ -15,9 +16,11 @@ class ProductsController < ApplicationController
 
     redirect_to root_path, notice: "HAS RESERVADO EL PRODUCTO"
   end
+
   # GET /products/1
   # GET /products/1.json
   def show
+    @product = Product.find(params[:id])
   end
 
   # GET /products/new
@@ -30,6 +33,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+    @product = Product.find(params[:id])
   end
 
   # POST /products

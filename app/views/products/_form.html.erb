@@ -29,17 +29,6 @@
   </div>
 </div>
 
-<div class="form-group form-group-custom">
-  <%= form.label :picture, "URL Imagen", class: "col-lg-2 control-label" %>
-  <div class="col-lg-10">
-    <%= image_tag(product.picture, style: "margin-bottom: 10px; border-radius: 5px;") if product.picture? %>
-
-    <%= form.text_field :picture, id: :product_picture, class: "form-control" %>
-  </div>
-  <%= form.hidden_field :picture_cache %>
-</div>
-
-
 
 <div class="form-group">
   <%= form.label :description, "Descripción", class: "col-lg-2 control-label" %>
