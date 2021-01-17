@@ -1,22 +1,21 @@
 class ProductsController < ApplicationController
 
-  before_action :authenticate_user!, only: [:show, :update, :destroy, :new]
+  before_action :authenticate_user!, only: [:edit, :update, :new, :set_aside, :create, :show]
 
   # GET /products
   # GET /products.json
   def index
     @products = Product.where(enabled:true)
-    @products = Product.search(params[:search])
   end
 
   def set_aside
     @product = Product.find(params[:id])
     @product.enabled = false
+    @product.reserved = current_user.id
     @product.save
 
     redirect_to root_path, notice: "HAS RESERVADO EL PRODUCTO"
   end
-
   # GET /products/1
   # GET /products/1.json
   def show
@@ -26,10 +25,18 @@ class ProductsController < ApplicationController
   # GET /products/new
   def new
     @product = Product.new
-    
   end
-  def offer
-    @product = Product.all
+
+  def reserved
+    @products = Product.where(enabled:false)
+  end
+  
+  def sold
+    @products = Product.where(enabled:false)
+  end
+
+  def publications
+    @publications = Product.all
   end
 
   # GET /products/1/edit
@@ -86,6 +93,6 @@ class ProductsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.require(:product).permit(:name, :description, :enabled, :picture, :user_id)
+      params.require(:product).permit(:name, :description, :enabled, :picture, :user_id, :reserved, :category)
     end
 end

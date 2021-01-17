@@ -12,11 +12,13 @@
 
   <body>
     <!--devise alert-->
-    <!--<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>-->
-    <!--render navbar-->
+    <% if notice %>
+      <p class="notice alert-primary"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
     <%= render "shared/navbar" %>
-
     <div class="container my-3">
       <%= yield %>
     </div>
