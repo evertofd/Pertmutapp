@@ -1,9 +1,12 @@
-<div class="comment clearfix">
+<div class="comment clearfix my-5 mb-5">
     <div class="comment_content">
         <p class="comment_name"><em><%= comment.name %></em></p>
         <p class="comment_body"><%= comment.body %></p>
         <p class="comment_title"><%= time_ago_in_words(comment.created_at) %>Ago</p>
+        <div class="container mx-auto d-flex my-4">
+          <div class="border-bottom w-100"></div>
+        </div>
     </div>
-    <p> <%= link_to 'Delete', [comment.product, comment], method: :delete, class: 'button', data: { confirm: 'Are you sure?'} %></p>
+    <p class="my-5"> <%= link_to 'Delete', [comment.product, comment], method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure?'} %></p>
 
 </div>

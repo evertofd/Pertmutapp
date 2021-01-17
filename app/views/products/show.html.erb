@@ -11,15 +11,19 @@
       <% if current_user.id == @product.user_id %>
         <%= link_to 'Editar', edit_product_path(@product),class: "btn btn-info" %>
       <% end %>
-
     </div>
   </div>
 </div>
-
-  <div id="comments">
+</div>
+<br>
+<div class="container mx-auto d-flex my-4">
+  <div class="border-bottom w-100"></div>
+</div>
+<br>
+<div id="comments" class="container">
         <h2><%= @product.comment.count %> Comments</h2>
         <%= render @product.comment %>
-        <h3> Join Discussion:</h3>
+        <h3 class="my-5"> Join Discussion:</h3>
         <%= render "comments/form" %>
-    </div>
 </div>
+

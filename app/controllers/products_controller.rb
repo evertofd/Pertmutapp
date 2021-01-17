@@ -6,6 +6,7 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.where(enabled:true)
+    @products = Product.search(params[:search])
   end
 
   def set_aside
