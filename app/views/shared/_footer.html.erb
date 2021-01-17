@@ -1,23 +1,36 @@
-<!--
-<footer class="fixed-bottom">
-  <p><%= image_tag("logo.jpeg") %>Copyright &copy; 2019 - All Rights Reserved.</p>  
-</footer>
--->
-<!-- Site footer -->
-<footer class="site-footer fixed-bottom">
-  <div class="container">
-    <div class="row">
-      <div>        
-        <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum..</p>
-      </div>     
-    </div>
-    <hr>
+
+<footer class="container-fluid colordark text-white letra">
+  <div class="row">
+    <div class="col-md-4" >
+      <p class="text-center"><%= image_tag 'logo_size_invert.jpg', class: "logo"%></p>
+      <h2 class="text-uppercase font-weight-bold mb-4 text-center">No dejes Pasar la Oportunidad</h2>
   </div>
-  <div class="container">
-    <div class="row">
-      <div>
-        <p><%= image_tag("logo.jpeg") %>Copyright &copy; 2019 - All Rights Reserved.</p>  
-      </div>     
+
+    <div class="col-md-4 mt-5 d-none d-sm-none d-md-block">
+      <h2 class="text-uppercase font-weight-bold mb-4 text-center">Navega</h2>
+      <ul class="list-unstyled text-center" >
+        <li class="mb-2"><a href="/" class="text-white letra"><h3>Inicio</h3></a></li>
+        <br>
+        <li class="mb-2"><a href="<%= new_product_path %>" class="text-white letra"><h3>Publicar</h3> </a></li>
+        <br>
+        <li class="mb-2"><a href="<%= products_publications_path  %>" class="text-white letra"><h3>Publicaciones</h3></a></li>
+        <br>
+      </ul>
+
+    </div>
+
+    <div class="col-md-4 mt-4">
+    <div class="col-md-4" >
+      <p><%= image_tag 'logo_size_invert.jpg', class: "logo"%></p>
+      <h2 class="text-uppercase font-weight-bold mb-4">Encuentralo!</h2>
+    </div>
+  </div>
+
+
+  <!-- Copyrights -->
+  <div >
+    <div class="container text-center text-white letra">
+      <p class="mb-0 py-2">© 2021 PERTMUTAPP donde encontrarás los que necesitas en Santiago.</p>
     </div>
   </div>
 </footer>

@@ -1,70 +1,106 @@
 <p id="notice"><%= notice %></p>
-
-<%= form_tag products_path, :method => 'get' do %>
-<%= text_field_tag :search, params[:search] %>
-<%= submit_tag "Search" %>
-<% end %>
-
 <div class="row">
   <div class="col-xs-8 col-sm-10 col-md-10">
-    <h1 class="text-center text-secondary">Bienvenidos</h1>
+    <h1 class="text-center text-secondary">BIENVENIDOS AL MUNDO DEL CANJE</h1>
   </div>
-<!--carousel-->
-<div>
-  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
-      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
-      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner bg-dark">
-      <div class="carousel-item active">
-        <img src="https://www.superprof.cl/blog/wp-content/uploads/2019/01/cuerdas-guitarra.jpg" class="d-block w-100 fixed-height" alt="...">
-        <div id="lol" class="carousel-caption d-none d-md-block bg-dark opacity-3">
-          <h5>PertmutApp</h5>
-          <p>¡En <b>PertmutApp</b> te ayudamos a encontrar eso que tanto quieres!.</p>
+<br>
+<hr>
+<br>
+<section>
+  <!--carousel-->
+  <div class="container my-3">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner bg-dark">
+        <div class="carousel-item active">
+          <img src="https://www.superprof.cl/blog/wp-content/uploads/2019/01/cuerdas-guitarra.jpg" class="d-block w-100 fixed-height" alt="...">
+          <div id="lol" class="carousel-caption d-none d-md-block bg-dark opacity-3">
+            <strong>
+              <h4>PertmutApp</h4>
+              <p>¡En <b>PertmutApp</b> te ayudamos a encontrar eso que tanto quieres!.</p>
+            </strong>
+          </div>
+        </div>
+        <div class="carousel-item bg-dark">
+          <img src="https://as01.epimg.net/deporteyvida/imagenes/2019/11/03/portada/1572798603_458091_1572798763_noticia_normal_recorte1.jpg" class="d-block w-100 fixed-height" alt="...">
+          <div class="carousel-caption d-none d-md-block bg-dark opacity-3">
+            <strong>  
+              <h4>¿No lo necesitas?</h4>
+              <p>¡Anuncia tu producto y cambialo por otro! </p>
+            </strong>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7R28TGTVticikPBbhwXhjF1FdV1SSctSieg&usqp=CAU" class="d-block w-100 fixed-height" alt="...">
+          <div class="carousel-caption d-none d-md-block bg-dark opacity-3">
+            <strong>
+              <h4>Busca lo que necesitas</h4>
+              <p>¡No hay forma de perder! ¡Ganamos todos!.</p>
+            </strong>
+          </div>
         </div>
       </div>
-      <div class="carousel-item bg-dark">
-        <img src="https://as01.epimg.net/deporteyvida/imagenes/2019/11/03/portada/1572798603_458091_1572798763_noticia_normal_recorte1.jpg" class="d-block w-100 fixed-height" alt="...">
-        <div class="carousel-caption d-none d-md-block bg-dark opacity-3">
-          <h5>¿No lo necesitas?</h5>
-          <p>¡Anuncia tu producto y cambialo por otro! </p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7R28TGTVticikPBbhwXhjF1FdV1SSctSieg&usqp=CAU" class="d-block w-100 fixed-height" alt="...">
-        <div class="carousel-caption d-none d-md-block bg-dark opacity-3">
-          <h5>Busca lo que necesitas</h5>
-          <p>¡No hay forma de perder! ¡Ganamos todos!.</p>
-        </div>
-      </div>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </a>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </a>
   </div>
-</div>
+</section>
+<br>
+<hr style="margin-top: 30px;">
+<br>
+<section class="container d-none d-sm-none d-md-block pt-3">
+<div class="py-5">
+  <h1 class="text-center my-5">PERTMUTAPP</h1>
+  <div class="row">
+    <div class="col-lg-5">
+      <img  class="w-100 mb-4 border border-md border-white shadow-sm" src="<%= asset_path 'logo.jpg' %>">
+    </div>
+    <div class="col-lg-7">
 
-<div class="row">
-  <% @products.each do |product| %>
-  <div class="col-sm-4">
-    <div class="thumbnail">
-      <figure>
-      </figure>
-        <div class="caption text-center">
-        <h3><%= image_tag product.picture.variant(resize: "200x200") %></h3>
-        <h3> <%= product.name %></h3>
-        <h3><%= product.description %></h3>
-        <p><small><%= time_ago_in_words(product.created_at) %> ago</small></p>
-        <%= link_to 'Ver Producto', product, class: "btn btn-warning"  %>
-        </div>
-      </div>
+      <h4 class=" text-justify"> PertmutApp es una App creada para ayudar a comunicar y realizar canjes entre las personas que residencen actualmente en Santiago-Region Metropolitana y se han visto afectado por el COVID-19.</h4>
+      <br>
+      <h4 class=" text-justify"> Contamos con una amplia variedad de productos que son publicados por todas las personas que desean cambiar algo que no utilicen por otro objeto que deseen.</h4>
+      <br>
+      <h4 class=" text-justify"> Es importante destacar que PertmutApp no realiza cobros en ningun momento, es una inicitiva sin fines de lucros.</h4>
+      <br>
+      <h4 class=" text-justify ">Ya que nuestros servicios son gratuitos cualquier usuario podra registrarse y podra realizar transacciones a cualquier hora del día con otros usuarios</h4>
+      <br>
+      <h4 class=" text-justify ">PertmutApp te invita publicar y conocer el mundo del intercambio de bienes que ya no tienen valores para ti por alguno que consideres interesante!!!! APRESURATE Y COMIENZA A PUBLICAR YA!!!!</h5>
     </div>
-  <% end %>
+  </div>
 </div>
+<br>
+<hr style="margin-top: 30px;">
+<br>
+<section>
+<div class="container mx-auto d-flex my-4">
+  <div class="border-bottom w-100"></div>
+</div>
+<section>
+  <h1 class="text-center my-5">ARTICULOS DISPONIBLES</h1>
+    <div class="row my-5">
+      <% @products.each do |product| %>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+            <div class="caption text-center text-justify">
+            <h3><%= image_tag product.picture.variant(resize: "200x200") %></h3>
+            <h3> <%= product.name %></h3>
+            <h5 style="text-align:justify;"><%= product.description %></h3>
+            <p><small><%= time_ago_in_words(product.created_at) %> ago</small></p>
+            <%= link_to 'Ver Producto', product, class: "btn btn-warning"  %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+</section>
