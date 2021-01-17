@@ -5,16 +5,15 @@ Es una plataforma desarrollada para fomentar el uso de trueque en la ciudad.
 
 ## Equipo Railistas - Categoría Recorders Award
 
+* Integrantes: 
+* Everto Farias - evertofd
+* Matías Müller - matistanic
+* Daniel Borrero - d3bh
+
 ## Construido Con
 
 * Rails 6.1.1
 * Ruby 2.6.3
-
-##  Integrantes
-
-* Everto Farias - evertofd
-* Matías Müller - matistanic
-* Daniel Borrero - d3bh
 
 ## Detalles
 
