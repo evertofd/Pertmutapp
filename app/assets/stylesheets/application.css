@@ -16,3 +16,11 @@ width: 30px;
 #test img {
   width: 20px;
 }
+
+.fixed-height {
+  max-height: 400px;
+}
+
+.opacity-3 {
+  opacity:0.6!important;
+}

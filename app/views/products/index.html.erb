@@ -1,41 +1,70 @@
 <p id="notice"><%= notice %></p>
 
-
 <%= form_tag products_path, :method => 'get' do %>
-  <%= text_field_tag :search, params[:search] %>
-  <%= submit_tag "Search" %>
+<%= text_field_tag :search, params[:search] %>
+<%= submit_tag "Search" %>
 <% end %>
 
 <div class="row">
   <div class="col-xs-8 col-sm-10 col-md-10">
     <h1 class="text-center text-secondary">Bienvenidos</h1>
   </div>
-
-
-  <div class="row">
-    <% @products.each do |product| %>
-    <div class="col-sm-4">
-
-      <div class="thumbnail">
-
-        <figure>
-
-        </figure>
-
-
-        <div class="caption text-center">
-
-          <h3><%= image_tag product.picture.variant(resize: "200x200") %></h3>
-
-          <h3>  <%= product.name %></h3>
-
-          <h3><%= product.description %></h3>
-
-
-          <p><small><%= time_ago_in_words(product.created_at) %> ago</small></p>
-          <%= link_to 'Ver Producto', product, class: "btn btn-warning"  %>
+<!--carousel-->
+<div>
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner bg-dark">
+      <div class="carousel-item active">
+        <img src="https://www.superprof.cl/blog/wp-content/uploads/2019/01/cuerdas-guitarra.jpg" class="d-block w-100 fixed-height" alt="...">
+        <div id="lol" class="carousel-caption d-none d-md-block bg-dark opacity-3">
+          <h5>PertmutApp</h5>
+          <p>¡En <b>PertmutApp</b> te ayudamos a encontrar eso que tanto quieres!.</p>
+        </div>
+      </div>
+      <div class="carousel-item bg-dark">
+        <img src="https://as01.epimg.net/deporteyvida/imagenes/2019/11/03/portada/1572798603_458091_1572798763_noticia_normal_recorte1.jpg" class="d-block w-100 fixed-height" alt="...">
+        <div class="carousel-caption d-none d-md-block bg-dark opacity-3">
+          <h5>¿No lo necesitas?</h5>
+          <p>¡Anuncia tu producto y cambialo por otro! </p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7R28TGTVticikPBbhwXhjF1FdV1SSctSieg&usqp=CAU" class="d-block w-100 fixed-height" alt="...">
+        <div class="carousel-caption d-none d-md-block bg-dark opacity-3">
+          <h5>Busca lo que necesitas</h5>
+          <p>¡No hay forma de perder! ¡Ganamos todos!.</p>
         </div>
       </div>
     </div>
-    <% end %>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
   </div>
+</div>
+
+<div class="row">
+  <% @products.each do |product| %>
+  <div class="col-sm-4">
+    <div class="thumbnail">
+      <figure>
+      </figure>
+        <div class="caption text-center">
+        <h3><%= image_tag product.picture.variant(resize: "200x200") %></h3>
+        <h3> <%= product.name %></h3>
+        <h3><%= product.description %></h3>
+        <p><small><%= time_ago_in_words(product.created_at) %> ago</small></p>
+        <%= link_to 'Ver Producto', product, class: "btn btn-warning"  %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
