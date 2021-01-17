@@ -1,3 +1,4 @@
+<div class="text-center">
 <%= form_with(model: product, local: true, class: "form-horizontal") do |form| %>
   <% if product.errors.any? %>
   <div id="error_explanation">
@@ -11,14 +12,14 @@
   </div>
   <% end %>
   
-  <div class="form-group text-center">
+  <div class="form-group my-5 text-center">
     <%= form.label :name, "Título", class: "col-lg-2 control-label" %>
-    <div class="col-lg-10">
+    <div class="col-lg-10" >
       <%= form.text_field :name, id: :product_name %>
     </div>
   </div>
   
-  <div class="form-group form-group-custom">
+  <div class="form-group my-5 form-group-custom">
     <%= form.label :picture, "URL Imagen", class: "col-lg-2 control-label" %>
     <div class="col-lg-10">
       <%= image_tag(product.picture, style: "margin-bottom: 10px; border-radius: 5px;") if product.picture? %>
@@ -29,7 +30,7 @@
   </div>
 </div>
 
-<div class="form-group">
+<div class="form-group my-5">
   <%= form.label :description, "Descripción", class: "col-lg-2 control-label" %>
   <div class="col-lg-10">
     <%= form.text_area :description, id: :product_content, class: "form-control", rows: 10 %>
@@ -41,12 +42,13 @@
   <%= form.check_box :enabled, id: :product_enabled %>
 </div>
 
-<div class="form-group">
+<div class="form-group my-5">
   <div class="col-lg-10 col-lg-offset-2">
       <%= form.submit "Enviar", class: "btn btn-primary" %>
       <%= link_to 'Volver', products_path, class: "btn btn-warning"  %>      
-      <%= link_to 'Editar Productos', products_publications_path, class: "btn btn-succes"  %>
+      <%= link_to 'Editar Mis Productos', products_publications_path, class: "btn btn-success"  %>
     <% end %>
   </div>
 </div>
 <fieldset>  
+</div>

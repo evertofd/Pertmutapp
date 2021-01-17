@@ -1,30 +1,20 @@
 <div class="text-center">
   <p id="notice"><%= notice %></p>
+<div class="publication">
+  <div class="card" style="width: 40rem;">
+  <%= image_tag @product.picture.variant(resize: "200x200") %>
+    <div class="card-body">
+      <h5 class="card-title"><%= @product.name %></h5>
+      <p class="card-text"><%= @product.description %></p>
+      <p class="card-text"><%= @product.enabled %></p>
+      <%= link_to 'Reservar Producto', products_set_aside_path(@product), class: "btn btn-success"  %>
+      <% if current_user.id == @product.user_id %>
+        <%= link_to 'Editar', edit_product_path(@product),class: "btn btn-info" %>
+      <% end %>
 
-  <p>
-    <strong>Name:</strong>
-    <%= @product.name %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= @product.description %>
-  </p>
-
-  <p>
-    <strong>Disponible:</strong>
-    <%= @product.enabled %>
-  </p>
-
-  <p>
-    <strong>Picture:</strong>
-   <%= image_tag @product.picture.variant(resize: "200x200") %>
-  </p>
-  <%= link_to 'Reservar Producto', products_set_aside_path(@product), class: "btn btn-warning"  %>
-  <% if current_user.id == @product.user_id %>
-    <%= link_to 'Editar', edit_product_path(@product),class: "btn btn-info" %> |
-  <% end %>
-  <%= link_to 'Volver al Inicio', root_path, class: "btn btn-warning" %>
+    </div>
+  </div>
+</div>
 
   <div id="comments">
         <h2><%= @product.comment.count %> Comments</h2>
