@@ -8,7 +8,7 @@ Es una plataforma desarrollada para fomentar el uso de trueque en la ciudad.
 * Integrantes: 
 * Everto Farias - evertofd
 * Matías Müller - matistanic
-* Daniel Borrero - d3bh
+* Daniel Borrero - DaniBorrero
 
 ## Construido Con
 
