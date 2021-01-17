@@ -5,19 +5,14 @@ color: #868c96;
 }
 
 footer p {
-padding: 40px 0;
+padding: 5px 0;
 text-align: center;
 }
 
 footer img {
-width: 50px;
+width: 30px;
 }
 
 #test img {
   width: 20px;
-}
-
-.social-icons a.github:hover
-{
-  background-color:#3b5998
 }

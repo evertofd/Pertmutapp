@@ -17,11 +17,13 @@
     <!--render navbar-->
     <%= render "shared/navbar" %>
 
-    <div class="container">
+    <div class="container my-3">
       <%= yield %>
     </div>
 
-    <%= render  "shared/footer"%>
+    <div class="my-3">
+      <%= render  "shared/footer"%>
+    </div>
 
   <!--Bootstrap-->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
